@@ -8,8 +8,6 @@ Coming soon
 
 Currently we just have the barebones plugin out here, and in the near future will be adding the following:
 
-* Add grunt
-* Add linting
 * Add unit tests
 * Add demo/test app
 * Add getting started documentation
