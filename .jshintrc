@@ -1,0 +1,20 @@
+{
+    "laxcomma": true,
+    "curly": true,
+    "eqeqeq": true,
+    "forin": true,
+    "immed": true,
+    "latedef": true,
+    "newcap": true,
+    "noarg": true,
+    "noempty": true,
+    "nonbsp": true,
+    "quotmark": "single",
+    "undef": true,
+    "unused": true,
+    "strict": true,
+    "trailing": true,
+    "maxparams": 3,
+    "maxdepth": 4,
+    "browser": true
+}
