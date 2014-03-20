@@ -6,10 +6,8 @@ infinite-list.js is a jQuery plugin that makes long scrolling lists more efficie
 Coming soon
 -----------
 
-Currently we just have the barebones plugin out here, and in the near future will be adding the following:
-
-* Add unit tests
-* Add demo/test app
 * Add getting started documentation
+* Add demo/test app
+* Add more unit tests
 
 
