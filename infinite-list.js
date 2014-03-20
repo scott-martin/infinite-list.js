@@ -260,8 +260,7 @@
 
         // Places all items back in the dom and destroys the plugin
         destroy: function () {
-            this.$list.html(this.children());
-            this.$container
+            this.$list.html(this.children())
                 .removeData('plugin_' + pluginName)
                 .off('.' + pluginName);
         },
@@ -425,7 +424,8 @@
                 , down = this._prevScrollTop <= scrollTop
                 , start, end, i
                 , outOfView = false
-                , item;
+                , item
+                , change = false;
 
             if (!this._visibleItems.length()) {
                 start = 0;
@@ -447,10 +447,12 @@
                         if (item.beforeView(scrollTop)) {
                             item.$el.detach();
                             this._visibleItems.remove(item);
+                            change = true;
                         }
                     } else if (item.inView(scrollTop)) {
                         this.$rear.before(item.el);
                         this._visibleItems.push(item);
+                        change = true;
                     } else if (item.afterView(scrollTop)) {
                         outOfView = true;
                     }
@@ -462,10 +464,12 @@
                         if (item.afterView(scrollTop)) {
                             item.$el.detach();
                             this._visibleItems.remove(item);
+                            change = true;
                         }
                     } else if (item.inView(scrollTop)) {
                         this.$front.after(item.el);
                         this._visibleItems.unshift(item);
+                        change = true;
                     } else if (item.beforeView(scrollTop)) {
                         outOfView = true;
                     }
@@ -474,8 +478,10 @@
             this._frontHeight = this._visibleItems.elementAt(0).top;
             this._rearHeight = Math.max(this._itemList.last().bottom - this._visibleItems.last().bottom - this.ListItem.marginBottom, 0);
 
-            this.$front[0].style.height = this._frontHeight + 'px';
-            this.$rear[0].style.height = this._rearHeight + 'px';
+            if (change) {
+                this.$front[0].style.height = this._frontHeight + 'px';
+                this.$rear[0].style.height = this._rearHeight + 'px';
+            }
 
             this._prevScrollTop = scrollTop;
 
@@ -528,4 +534,6 @@
 
         return result !== undefined ? result : this;
     };
+
+    $.fn[pluginName].HashList = HashList;
 }(jQuery, window, document));
