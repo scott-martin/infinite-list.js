@@ -11,7 +11,8 @@
             topGutter: 300, //px
             bottomGutter: 300,
             itemClass: '',
-            itemElementType: 'div'
+            itemElementType: 'div',
+            scrollContainer: window
         }
         , ListItem;
 
