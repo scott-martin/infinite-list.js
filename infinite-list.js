@@ -159,6 +159,8 @@
                 this.append(Array.prototype.slice.call(this.$list[0].children));
             }
 
+
+            this.$rear.css('margin-bottom', this.ListItem.marginBottom);
             this.$list.prepend(this.$front)
                 .append(this.$rear);
 
