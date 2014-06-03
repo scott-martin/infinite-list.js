@@ -420,7 +420,6 @@
             }
         },
 
-        // Divide and conquer
         _scroll: function () {
             var items
                 , scrollTop = this._lastReadScrollTop
