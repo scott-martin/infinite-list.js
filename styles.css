@@ -3,11 +3,6 @@ body {
     background-color: whitesmoke;
 }
 
-#container {
-    /*height: 300px;*/
-    /*overflow: scroll;*/
-    /* border: 1px solid orange; */
-}
 #list {
     position: relative;
     margin-top: 50px;
@@ -19,7 +14,7 @@ body {
 }
 .item {
     border: 1px solid grey;
-    margin-bottom: 250px;
+    margin-bottom: 25px;
     box-shadow: 3px 3px 1px #ddd;
     border-radius: 5px;
     padding: 8px;
