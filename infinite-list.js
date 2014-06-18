@@ -159,6 +159,8 @@
                 this.append(Array.prototype.slice.call(this.$list[0].children));
             }
 
+
+            this.$rear.css('margin-bottom', this.ListItem.marginBottom);
             this.$list.prepend(this.$front)
                 .append(this.$rear);
 
@@ -418,7 +420,6 @@
             }
         },
 
-        // Divide and conquer
         _scroll: function () {
             var items
                 , scrollTop = this._lastReadScrollTop
