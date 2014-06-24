@@ -363,6 +363,8 @@
                 .append(this.$rear);
             this.$rear[0].style.height = '';
             this.$front[0].style.height = '';
+            this._prevScrollTop = this._scrollTop;
+            this._lastReadScrollTop = this._prevScrollTop;
         },
 
         // Takes an Array of Elements or jQuery
@@ -420,7 +422,6 @@
             }
         },
 
-        // Divide and conquer
         _scroll: function () {
             var items
                 , scrollTop = this._lastReadScrollTop
