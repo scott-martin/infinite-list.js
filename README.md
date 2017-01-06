@@ -5,7 +5,7 @@ infinite-list.js is a jQuery plugin that makes long scrolling lists more efficie
 
 If you have an infinitely loading feed of items or simply a really long list of items, then this plugin can help improve the performance of your page.
 
-Checkout the demo to see it in action: http://peoplematter.github.io/infinite-list.js/
+Checkout the demo to see it in action: http://scott-martin.github.io/infinite-list.js/
 
 Getting Started
 ---------------
